@@ -65,6 +65,8 @@ h1 {
 .category-item span {
   font-size: 1.2rem;
   font-weight: 600;
+  width: 200px;
+  text-align: center;
 }
 
 .category-item i {
@@ -117,12 +119,47 @@ h1 {
 }
 
 .subcategory-item:hover {
-  background-color: #27ae60;
+  background-color: #6a4e59;
   transform: scale(1.05);
+}
+.subcategory-item1 {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px;
+  background-color: #1815c0; /* Green for subcategory */
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  width: 100%;
+  color: white;
+}
+
+.subcategory-item1:hover {
+  background-color: #25543a;
+  transform: scale(1.05);
+}
+.subcategory-item1 img {
+  width: 200px; /* Adjust size for subcategory image */
+  height: 80px;
+  margin-left: 15px; /* Image on the right side of text */
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.subcategory-item1 span {
+  font-size: 1.7rem;
+  font-weight: 700;
+ width: 300px;
+}
+
+.subcategory-item1 i {
+  font-size: 1.5rem;
 }
 
 .subcategory-item img {
-  width: 100px; /* Adjust size for subcategory image */
+  width: 200px; /* Adjust size for subcategory image */
   height: 80px;
   margin-left: 15px; /* Image on the right side of text */
   border-radius: 50%;
@@ -130,8 +167,9 @@ h1 {
 }
 
 .subcategory-item span {
-  font-size: 1.2rem;
-  font-weight: 600;
+  font-size: 1.7rem;
+  font-weight: 700;
+ width: 300px;
 }
 
 .subcategory-item i {
@@ -773,7 +811,8 @@ list-style: none;
     font-size: 0.8rem;
   }
 }
-.logo img{
+/* Style for the logo */
+.logo img {
   width: 50px;
   height: auto;
   margin-bottom: 10px;
@@ -781,4 +820,331 @@ list-style: none;
   transition: filter 0.3s ease;
   border-radius: 50%;
   margin-top: 50px;
+  animation: bounce 2s infinite alternate; /* Add bouncing animation */
+  transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+/* Add an animation on hover for logo */
+.logo img:hover {
+  transform: scale(1.2); /* Increase size when hovered */
+  filter: brightness(1.2); /* Brighten the logo */
+}
+
+/* Create a text animation for the title */
+.logo h1 {
+  font-size: 24px;
+  color: #2c3e50;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-weight: bold;
+  animation: fadeIn 3s ease-in-out forwards, slideIn 2s ease-out forwards;
+  opacity: 0; /* Initially hidden */
+  margin-top: 20px;
+}
+
+/* Fade-in animation */
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+/* Slide-in animation for text */
+@keyframes slideIn {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+/* Bouncing effect for the logo */
+@keyframes bounce {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-15px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+/* Add a hover effect on the whole logo container (logo + text) */
+.logo:hover h1 {
+  color: #3498db; /* Change text color on hover */
+}
+
+/* Define the blink animation */
+@keyframes blink {
+  0% {
+    background-color: initial;
+    color: initial;
+  }
+  25% {
+    background-color: #ffcc00; /* First color */
+    color: #1a1a1a; /* Text color */
+  }
+  50% {
+    background-color: #ff4d4d; /* Second color */
+    color: #ffffff; /* Text color */
+  }
+  75% {
+    background-color: #4dff88; /* Third color */
+    color: #000000; /* Text color */
+  }
+  100% {
+    background-color: #00b3ff; /* Fourth color */
+    color: #ffffff; /* Text color */
+  }
+}
+
+/* Applying the blink animation to .drinks */
+.drinks {
+  margin-top: 20px;
+  background-color: #ffcc00; /* Starting background color */
+  color: #1a1a1a;
+  padding: 20px;
+  border-radius: 10px;
+  animation: blink 2s infinite; /* Apply animation with 2s duration */
+}
+
+/* Applying the blink animation to .wine */
+.wine {
+  margin-top: 20px;
+  background-color: #ff4d4d; /* Starting background color */
+  color: #ffffff;
+  padding: 20px;
+  border-radius: 10px;
+  animation: blink 2s infinite; /* Apply animation with 2s duration */
+}
+
+/* Applying the blink animation to .info */
+.info {
+  margin-top: 20px;
+  background-color: #4dff88; /* Starting background color */
+  color: #000000;
+  padding: 20px;
+  border-radius: 10px;
+  animation: blink 2s infinite; /* Apply animation with 2s duration */
+}
+
+/* Applying the blink animation to .kitchen */
+.kitchen {
+  margin-top: 20px;
+  background-color: #00b3ff; /* Starting background color */
+  color: #ffffff;
+  padding: 20px;
+  border-radius: 10px;
+  animation: blink 2s infinite; /* Apply animation with 2s duration */
+}
+
+
+
+/* Define the fading animation */
+@keyframes fade {
+  0% {
+    opacity: 0;
+    transform: scale(0.8);
+    background-color: initial;
+    color: initial;
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1);
+    background-color: #ff6f61; /* Red for app1 */
+    color: #ffffff; /* White text */
+  }
+  100% {
+    opacity: 0;
+    transform: scale(1.2);
+    background-color: #ffcc00; /* Yellow for app1 */
+    color: #1a1a1a; /* Dark text */
+  }
+}
+
+/* Apply the fade animation to .app1 */
+.app1 {
+  margin-top: 20px;
+  background-color: #ff6f61; /* Initial red background */
+  color: #ffffff;
+  padding: 20px;
+  border-radius: 10px;
+  animation: fade 3s infinite; /* Apply animation with 3s duration */
+}
+
+/* Define the fade animation for .dish */
+@keyframes fadeDish {
+  0% {
+    opacity: 0;
+    transform: scale(0.8);
+    background-color: initial;
+    color: initial;
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1);
+    background-color: #8e44ad; /* Purple for dish */
+    color: #ffffff; /* White text */
+  }
+  100% {
+    opacity: 0;
+    transform: scale(1.2);
+    background-color: #3498db; /* Blue for dish */
+    color: #ffffff; /* White text */
+  }
+}
+
+/* Apply the fade animation to .dish */
+.dish {
+  margin-top: 20px;
+  background-color: #8e44ad; /* Initial purple background */
+  color: #ffffff;
+  padding: 20px;
+  border-radius: 10px;
+  animation: fadeDish 3s infinite; /* Apply animation with 3s duration */
+}
+
+/* Define the fade animation for .more */
+@keyframes fadeMore {
+  0% {
+    opacity: 0;
+    transform: scale(0.8);
+    background-color: initial;
+    color: initial;
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1);
+    background-color: #f39c12; /* Orange for more */
+    color: #ffffff; /* White text */
+  }
+  100% {
+    opacity: 0;
+    transform: scale(1.2);
+    background-color: #2ecc71; /* Green for more */
+    color: #ffffff; /* White text */
+  }
+}
+
+/* Apply the fade animation to .more */
+.more {
+  margin-top: 20px;
+  background-color: #f39c12; /* Initial orange background */
+  color: #ffffff;
+  padding: 20px;
+  border-radius: 10px;
+  animation: fadeMore 3s infinite; /* Apply animation with 3s duration */
+}
+
+/* Define the fade animation for .sweets */
+@keyframes fadeSweets {
+  0% {
+    opacity: 0;
+    transform: scale(0.8);
+    background-color: initial;
+    color: initial;
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1);
+    background-color: #e74c3c; /* Red for sweets */
+    color: #ffffff; /* White text */
+  }
+  100% {
+    opacity: 0;
+    transform: scale(1.2);
+    background-color: #9b59b6; /* Purple for sweets */
+    color: #ffffff; /* White text */
+  }
+}
+
+/* Apply the fade animation to .sweets */
+.sweets {
+  margin-top: 20px;
+  background-color: #e74c3c; /* Initial red background */
+  color: #ffffff;
+  padding: 20px;
+  border-radius: 10px;
+  animation: fadeSweets 3s infinite; /* Apply animation with 3s duration */
+}
+
+
+
+.subcategory-item3 {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px;
+  background-color: #1815c0; /* Green for subcategory */
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  width: 100%;
+  color: white;
+}
+
+.subcategory-item3:hover {
+  background-color: #25543a;
+  transform: scale(1.05);
+}
+.subcategory-item3 img {
+  width: 200px; /* Adjust size for subcategory image */
+  height: 80px;
+  margin-left: 15px; /* Image on the right side of text */
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.subcategory-item3 span {
+  font-size: 1.7rem;
+  font-weight: 700;
+ width: 300px;
+}
+
+.subcategory-item3 i {
+  font-size: 1.5rem;
+}
+
+
+.subcategory-item2 {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px;
+  background-color: hsl(242, 26%, 82%); /* Green for subcategory */
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  width: 100%;
+  color: white;
+}
+
+.subcategory-item2:hover {
+  background-color: #25543a;
+  transform: scale(1.05);
+}
+.subcategory-item2 img {
+  width: 200px; /* Adjust size for subcategory image */
+  height: 80px;
+  margin-left: 15px; /* Image on the right side of text */
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.subcategory-item2 span {
+  font-size: 1.7rem;
+  font-weight: 700;
+ width: 300px;
+}
+
+.subcategory-item2 i {
+  font-size: 1.5rem;
 }

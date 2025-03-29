@@ -41,25 +41,25 @@ function App() {
         <nav className="category-grid">
           <div className="category-item" onClick={() => toggleCategory('kitchen')}>
             <img src="https://raw.githubusercontent.com/dawit-abrha/cssas1/main/kitchen.jpeg?raw=true" alt="Kitchen" className="category-image" />
-            <span>Kitchen</span>
+            <span className='kitchen'>Kitchen</span>
             <i className={`fa ${activeCategory === 'kitchen' ? 'fa-chevron-up' : 'fa-chevron-down'}`}></i>
           </div>
 
           <div className="category-item" onClick={() => toggleCategory('drinks')}>
             <img src="https://raw.githubusercontent.com/dawit-abrha/cssas1/main/drinks.jpeg?raw=true" alt="Drinks" className="category-image" />
-            <span>Drinks</span>
+            <span className='drinks'>Drinks</span>
             <i className={`fa ${activeCategory === 'drinks' ? 'fa-chevron-up' : 'fa-chevron-down'}`}></i>
           </div>
 
           <div className="category-item" onClick={() => toggleCategory('wine-list')}>
             <img src="https://raw.githubusercontent.com/dawit-abrha/cssas1/main/winelist.jpg?raw=true" alt="Wine List" className="category-image" />
-            <span>Wine List</span>
+            <span className='wine'>Wine List</span>
             <i className={`fa ${activeCategory === 'wine-list' ? 'fa-chevron-up' : 'fa-chevron-down'}`}></i>
           </div>
 
           <div className="category-item" onClick={() => toggleCategory('info')}>
             <img src="https://raw.githubusercontent.com/dawit-abrha/cssas1/main/info_logo.png?raw=true" alt="Info" className="category-image" />
-            <span>Info</span>
+            <span className='info'>Info</span>
             <i className={`fa ${activeCategory === 'info' ? 'fa-chevron-up' : 'fa-chevron-down'}`}></i>
           </div>
         </nav>
@@ -76,33 +76,33 @@ function App() {
               <>
                 <div className="subcategory-item" onClick={() => toggleSubcategory('appetizers')}>
                   <img src="https://raw.githubusercontent.com/dawit-abrha/cssas1/main/kitchen.jpeg?raw=true" alt="Appetizers" />
-                  <span>Appetizers</span>
+                  <span className='app1'>Appetizers</span>
                   <i className={`fa ${activeSubcategory === 'appetizers' ? 'fa-chevron-up' : 'fa-chevron-down'}`}></i>
                 </div>
                 {activeSubcategory === 'appetizers' && <KitchenSubcategory name="Appetizers" />}
                 
-                <div className="subcategory-item" onClick={() => toggleSubcategory('single-dishes')}>
+                <div className="subcategory-item1" onClick={() => toggleSubcategory('single-dishes')}>
                   <img src="https://raw.githubusercontent.com/dawit-abrha/cssas1/main/kitchen.jpeg?raw=true" alt="Single Dishes" />
-                  <span>Single Dishes</span>
+                  <span className='dish'>Single Dishes</span>
                   <i className={`fa ${activeSubcategory === 'single-dishes' ? 'fa-chevron-up' : 'fa-chevron-down'}`}></i>
                 </div>
                 {activeSubcategory === 'single-dishes' && <KitchenSubcategory name="Single Dishes" />}
                 
                 <div className="subcategory-item" onClick={() => toggleSubcategory('more')}>
                   <img src="https://raw.githubusercontent.com/dawit-abrha/cssas1/main/kitchen.jpeg?raw=true" alt="More" />
-                  <span>More</span>
+                  <span className='more'>More</span>
                   <i className={`fa ${activeSubcategory === 'more' ? 'fa-chevron-up' : 'fa-chevron-down'}`}></i>
                 </div>
                 {activeSubcategory === 'more' && <KitchenSubcategory name="More" />}
                 
-                <div className="subcategory-item" onClick={() => toggleSubcategory('sweets')}>
+                <div className="subcategory-item3" onClick={() => toggleSubcategory('sweets')}>
                   <img src="https://raw.githubusercontent.com/dawit-abrha/cssas1/main/kitchen.jpeg?raw=true" alt="Sweets" />
-                  <span>Sweets</span>
+                  <span className='sweets'>Sweets</span>
                   <i className={`fa ${activeSubcategory === 'sweets' ? 'fa-chevron-up' : 'fa-chevron-down'}`}></i>
                 </div>
                 {activeSubcategory === 'sweets' && <KitchenSubcategory name="Sweets" />}
                 
-                <div className="subcategory-item" onClick={() => toggleSubcategory('new-year')}>
+                <div className="subcategory-item2" onClick={() => toggleSubcategory('new-year')}>
                   <img src="https://raw.githubusercontent.com/dawit-abrha/cssas1/main/kitchen.jpeg?raw=true" alt="New Year" />
                   <span>New Year</span>
                   <i className={`fa ${activeSubcategory === 'new-year' ? 'fa-chevron-up' : 'fa-chevron-down'}`}></i>

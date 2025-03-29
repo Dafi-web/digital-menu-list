@@ -28,7 +28,7 @@ function Footer() {
           </select>
         </div>
         <div className="logo">
-          <img src="https://github.com/Dafi-web/digital-menu/blob/main/WhatsApp%20Image%202025-03-29%20at%2015.15.31%20(1).jpeg?raw=true" alt="Logo" />
+          <img src="https://github.com/Dafi-web/cssas1/blob/main/WhatsApp%20Image%202025-03-29%20at%2015.15.31.jpeg?raw=true" alt="Logo" />
         </div>
       </div>
     </div>
