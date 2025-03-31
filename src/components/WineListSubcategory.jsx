@@ -1,5 +1,6 @@
 import React from 'react';
 import '../App.css';
+
 const WineListSubcategory = ({ name }) => {
   const wines = {
     "Red Wines": [
@@ -12,16 +13,34 @@ const WineListSubcategory = ({ name }) => {
     ]
   };
 
+  // Normalize the category name (replace hyphens with spaces and capitalize each word)
+  const normalizedCategory = name
+    .replace('-', ' ') // Replace hyphens with spaces
+    .replace(/\b\w/g, char => char.toUpperCase()); // Capitalize the first letter of each word
+
+  console.log("Selected Wine Category: ", normalizedCategory);
+
+  // Filter the wines based on the normalized category name
+  const filteredWines = wines[normalizedCategory] || [];
+
   return (
     <div className="menu-list">
-      {wines[name] && wines[name].map((item, index) => (
-        <div className="menu-item" key={index}>
-          <img src={item.image} alt={item.name} />
-          <h3>{item.name}</h3>
-          <p>{item.description}</p>
-          <button>{item.price}</button>
-        </div>
-      ))}
+      {filteredWines.length === 0 ? (
+        <p>No wines available for this category.</p> // Message when there are no wines
+      ) : (
+        filteredWines.map((item, index) => (
+          <div className="menu-item" key={index}>
+            <div className="text-container">
+              <h3>{item.name}</h3>
+              <p>{item.description}</p>
+            </div>
+            <div className="image-container">
+              <img src={item.image} alt={item.name} />
+              <div className="price">{item.price}</div>
+            </div>
+          </div>
+        ))
+      )}
     </div>
   );
 };

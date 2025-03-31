@@ -16,7 +16,7 @@ const InfoSubcategory = ({ name }) => {
     },
     { 
       title: 'Location', 
-      description: <p className="info-description">Find our location here.</p>, 
+      description: <p className="info-description">Trova la nostra posizione qui.</p>, 
       image: 'https://github.com/dawit-abrha/cssas1/blob/main/location.png?raw=true',
       link: 'https://www.google.com/maps/place/Corso+Concordia,+9,+20129+Milano+MI,+Italy/' 
     },
@@ -24,17 +24,17 @@ const InfoSubcategory = ({ name }) => {
       title: 'About Us', 
       description: (
         <>
-          <p className="info-description"><strong>History:</strong> Restorante Africa has been serving authentic African cuisine in the heart of Milan since ???. We take pride in offering traditional dishes prepared with fresh, high-quality ingredients.</p>
-          <p className="info-description"><strong>Opening Hours:</strong></p>
+          <p className="info-description"><strong>History:</strong> Il Restorante Africa serve autentica cucina africana nel cuore di Milano dal ???. Siamo orgogliosi di offrire piatti tradizionali preparati con ingredienti freschi e di alta qualità.</p>
+          <p className="info-description"><strong>Orari di apertura:</strong></p>
           <ul className="info-description-list">
-            <li className="info-description-item">Monday - Friday: 12:00 PM - 10:30 PM</li>
-            <li className="info-description-item">Saturday - Sunday: 1:00 PM - 11:00 PM</li>
+            <li className="info-description-item">Lunedì - Venerdì: 12:00 PM - 10:30 PM</li>
+            <li className="info-description-item">Sabato - Domenica: 1:00 PM - 11:00 PM</li>
           </ul>
-          <p className="info-description"><strong>Our Rules:</strong></p>
+          <p className="info-description"><strong>Le nostre regole:</strong></p>
           <ul className="info-description-list">
-            <li className="info-description-item">Reservations recommended for weekends.</li>
-            <li className="info-description-item">We kindly ask guests to respect our no-smoking policy inside.</li>
-            <li className="info-description-item">Pets are allowed on our outdoor terrace.</li>
+            <li className="info-description-item">Si consiglia la prenotazione per i fine settimana.</li>
+            <li className="info-description-item">Chiediamo gentilmente agli ospiti di rispettare la nostra politica antifumo all'interno.</li>
+            <li className="info-description-item">Gli animali domestici sono ammessi sulla nostra terrazza esterna.</li>
           </ul>
         </>
       ), 

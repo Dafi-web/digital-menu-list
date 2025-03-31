@@ -24,10 +24,11 @@ h1 {
   max-width: 1200px;
   margin: 0 auto;
   padding: 20px;
-  background-color: #2980b9;
+  
   border-radius: 20px;
-}
+  overflow-y: auto;
 
+}
 .category-grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr); /* This will create 2 equal-width columns */
@@ -183,22 +184,30 @@ h1 {
   background-color: #fff;
   border-radius: 8px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  overflow-y: auto;
 }
 
+/* Main container for the menu */
+
+
+/* Menu item styling */
 .menu-item {
   display: flex;
   justify-content: space-between;
   padding: 12px 0;
   border-bottom: 1px solid #ddd;
+  flex-wrap: wrap; /* Ensures items wrap when screen size is small */
+  width: 100%; /* Ensures the item doesn't overflow */
 }
 
 .menu-item:last-child {
   border-bottom: none;
 }
 
-.menu-item span {
-  font-size: 1rem;
-  font-weight: 500;
+.menu-item .text-container {
+  flex: 1;
+  padding-left: 15px;
+  overflow: hidden; /* Prevents text from overflowing */
 }
 
 .menu-item .price {
@@ -207,12 +216,36 @@ h1 {
 }
 
 .menu-item img {
-  width: 80px; /* Adjust size for menu item image */
+  width: 80px;
   height: 80px;
   border-radius: 50%;
   object-fit: cover;
   margin-left: 20px;
 }
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .menu-item {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .menu-item .text-container {
+    padding-left: 0;
+    margin-top: 10px;
+  }
+
+  .menu-item img {
+    margin-left: 0;
+    margin-bottom: 10px;
+  }
+
+  .menu-item .price {
+    font-size: 1.2rem;
+  }
+}
+
 
 /* Responsive Styles */
 @media (max-width: 768px) {
@@ -459,19 +492,22 @@ h1 {
   box-shadow: 10px 4px rgba(222, 28, 63, 0.1);
   transition: transform 0.3s ease;
   border-radius: 20px;
+  height: 600px;
 }
 
 
 
 /*kitchen*/
-/* Footer Styles */
-/* General Menu List Styling */
 .menu-list {
   display: flex;
-   /* Default to column for mobile */
-  gap: 20px;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  max-width: 100%;
+  margin: 0 auto;
   padding: 20px;
-  background-color: #fafafa; /* Light gray background for the list */
+  background-color: #d9d4e2;
+  border-radius: 20px;
+  overflow-y: auto;
 }
 
 .menu-item {
@@ -907,31 +943,31 @@ list-style: none;
 /* Applying the blink animation to .drinks */
 .drinks {
   margin-top: 20px;
-  background-color: #ffcc00; /* Starting background color */
+  background-color: #0ac4a2; /* Starting background color */
   color: #1a1a1a;
   padding: 20px;
   border-radius: 10px;
-  animation: blink 2s infinite; /* Apply animation with 2s duration */
+  animation: blink 25s infinite; /* Apply animation with 2s duration */
 }
 
 /* Applying the blink animation to .wine */
 .wine {
   margin-top: 20px;
-  background-color: #ff4d4d; /* Starting background color */
+  background-color: #746363; /* Starting background color */
   color: #ffffff;
   padding: 20px;
   border-radius: 10px;
-  animation: blink 2s infinite; /* Apply animation with 2s duration */
+  animation: blink 25s infinite; /* Apply animation with 2s duration */
 }
 
 /* Applying the blink animation to .info */
 .info {
   margin-top: 20px;
-  background-color: #4dff88; /* Starting background color */
+  background-color: #aae325; /* Starting background color */
   color: #000000;
   padding: 20px;
   border-radius: 10px;
-  animation: blink 2s infinite; /* Apply animation with 2s duration */
+  animation: blink 25s infinite; /* Apply animation with 2s duration */
 }
 
 /* Applying the blink animation to .kitchen */
@@ -941,7 +977,7 @@ list-style: none;
   color: #ffffff;
   padding: 20px;
   border-radius: 10px;
-  animation: blink 2s infinite; /* Apply animation with 2s duration */
+  animation: blink 25s infinite; /* Apply animation with 2s duration */
 }
 
 
@@ -1148,3 +1184,4 @@ list-style: none;
 .subcategory-item2 i {
   font-size: 1.5rem;
 }
+
